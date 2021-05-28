@@ -1,0 +1,98 @@
+<%@ page language=”java” contentType=”text/html; charset=ISO-8859-1”
+    pageEncoding=”ISO-8859-1”%>
+<!DOCTYPE html>
+<html lang=”en”>
+    <head>
+        <title>tu plazoleta </title>
+        <link href=https://fonts.googleapis.com/css?family=Handlee rel=”stylesheet”>
+        <link rel=”stylesheet” href=”css/css-Index-Registro.css”>
+        <meta charset=”UTF-8”>
+        <meta name=”viewport” content=”width=device-width, initial-scale=1.0”>
+    </head>
+<body>
+    </header>
+       <!—header start 
+        <div id=”header” class=”section”>
+            <img alt=”” class=”img-circle” src=https://code.sololearn.com/Icons/Avatars/0.jpg>
+            <p>tu plazoleta</p>
+        </div>
+        <!—header end 
+    <header class=”encabezado1”>
+             <div class=”contenedor1”>
+ 
+                    <div class=”logo”>
+                           <h1 class=”LOGOTIPO”> <img src=”img/tu plazoleta .png” alt=”tu_plazoleta_logo”width=”300” height=”100”></h1>
+       
+                    </div>
+ 
+             </div>
+        
+        <!—Acerca de mi  section start 
+        <div class=”section”>
+            <h1><span>About Me</span></h1>
+            <p>
+                Hey! Somos  <strong>tu plazoleta </strong>. La mejor opcion cerca de ti ¡
+            </p>
+            
+        </div>
+        <!—Acerca de mi  section end 
+    <div class=”caja3”> 
+        <!—Form section start  
+        <h1><span>Registrate aquí</span></h1>
+                <div class=”section”>
+                <svg class=”face” height=”100” width=”100”>
+                <circle cx=”50” cy=”50” r=”50” fill=”#FDD835”/>
+                <circle cx=”30” cy=”30” r=”10” fill=”#FFFFFF”/>
+                <circle cx=”70” cy=”30” r=”10” fill=”#FFFFFF”/>
+                <circle cx=”30” cy=”30” r=”5” fill=”#000000”/>
+                <circle cx=”70” cy=”30” r=”5” fill=”#000000”/>
+                <path d=”M 30 70 q 20 20 40 0” stroke=”#FFFFFF” stroke-width=”5” fill=”none” />
+            </svg>
+                 
+            <section class=”pageContent”>
+ 
+            <div class=”registro-box”>
+        <form>
+                <input name=”Nombre” placeholder=”Nombre” type=”text” required /><br/>
+                <input name=”Apellido” placeholder=”Apellido” type=”text” required /><br/>
+                <input name=”No_Documento” placeholder=”No_Documento” type=”text” required /><br/>
+                <input name=”No.Telefonico” placeholder=”No.Telefonico” type=”text” required /><br/>
+                <input name=”email” placeholder=”Email” type=”email” required /><br/>
+                <input name=”password” placeholder=”password” type=”text” required /><br/>
+                <input name=”password” placeholder=”password” type=”text” required /><br/>
+                <input type=”submit” value=”SEND” class=”submit” />
+        </form
+            </div>
+        <!—Form section end 
+<!—Form section start 
+       <div class=”section”>
+            <h1><span>Contact Me</span></h1>
+            
+            <svg class=”face” height=”100” width=”100”>
+                <circle cx=”50” cy=”50” r=”50” fill=”#FDD835”/>
+                <circle cx=”30” cy=”30” r=”10” fill=”#FFFFFF”/>
+                <circle cx=”70” cy=”30” r=”10” fill=”#FFFFFF”/>
+                <circle cx=”30” cy=”30” r=”5” fill=”#000000”/>
+                <circle cx=”70” cy=”30” r=”5” fill=”#000000”/>
+                <path d=”M 30 70 q 20 20 40 0” stroke=”#FFFFFF” stroke-width=”5” fill=”none” />
+            </svg>     
+            <form>
+                <input name=”name” placeholder=”Name” type=”text” required /><br/>
+                <input name=”email” placeholder=”Email” type=”email” required /><br/>
+                <textarea name=”message” placeholder=”Message” required ></textarea>
+                <input type=”submit” value=”SEND” class=”submit” />
+            </form>
+        </div>
+        <!—Form section end 
+        <!—Contacts section start 
+        <div class=”section” id=”contacts”>
+        </div>
+        <!—Contacts section end 
+<footer class=”pie pagina”>
+        <div class=”copyright”>
+ <h4>Centro de ayuda , Condiciones de Servicio, Politica de privacidad ,Politica de cookis</h4>
+           &copy; 2021 My Blog. All rights reserved.
+        </div>
+</footer>
+</body>
+</html>
