@@ -1,0 +1,126 @@
+Package modelo;
+ 
+Import java.sql.Connection;
+Import java.sql.PreparedStatement;
+Import java.sql.ResultSet;
+Import conexión.Conexion;
+Import entidad.Usuario;
+ 
+Public class ModeloUsuario {     
+                Public Usuario iniciarSesion(String email, String contraseña) {
+                               Usuario usuario = null;
+                               Connection cn = null;
+                               PreparedStatement pstm = null;
+                               ResultSet rs = null;
+                               
+                               Try {
+                                               Cn = Conexión.getConexion();
+                                               String sql = “SELECT U.idUsuario, U.email, U.contraseña FROM usuario U WHERE U.email = ¿ AND U.contraseña = ¿”;
+                                               Pstm = cn.prepareStatement(sql);
+                                               Pstm.setString(1, email);
+                                               Pstm.setString(2, contraseña);
+                                               Rs = pstm.executeQuery();
+                                               
+                                               While (rs.next()) {
+                                                               Usuario = new Usuario();
+                                                               Usuario.setIdUsuario(rs.getInt(“idUsuario”));
+                                                               Usuario.setEmail(rs.getString(“email”));
+                                                               Usuario.setContraseña(rs.getString(“contraseña”));
+                                               }
+                                               
+                               } catch (Exception e) {
+                                               e.printStackTrace();
+                               } finally {
+                                               Try {
+                                                               If (rs ¡= null) {
+                                                                              Rs.close();
+                                                               }
+                                                               
+                                                               If (pstm ¡= null) {
+                                                                              Pstm.close();
+                                                               }
+                                                               
+                                                               If (cn ¡= null) {
+                                                                              Cn.close();
+                                                               }
+                                               } catch (Exception e2) {
+                                                               E2.printStackTrace();
+                                               }
+                               }
+                               
+                               Return usuario;
+                }
+}
+ 
+Package modelo;
+ 
+ 
+Import java.sql.Connection;
+Import java.sql.PreparedStatement;
+Import java.sql.ResultSet;
+Import conexión.Conexion;
+Import entidad.Registro_Usuario;
+ 
+ 
+ 
+Public class ModeloRegistroUsuario {
+                
+                 Public Registro_Usuario Enviar (String nombre, String apellido, int documento, int telefono,String email, String contraseña, String c_contraseña) {
+                                   
+                                   Registro_Usuario usuario = null;
+                                   Connection cn = null;
+                                   PreparedStatement pstm = null;
+                                               ResultSet rs = null;
+         
+         
+         Try {
+                 
+                 Cn = Conexión.getConexion();
+                 String sql = “INSERT INTO accounts(naombre, apellido, documento, telefono, email, contraseña, c_contraseña) VALUES(¿,?,?,?,?,?,?)”;
+                 Pstm = cn.prepareStatement(sql);
+                 Pstm.setString(1, nombre);
+                 Pstm.setString(2, apellido);
+                 Pstm.setInt(3, documento);
+                 Pstm.setInt(4, telefono);
+                 Pstm.setString(5, email);
+                 Pstm.setString(6, contraseña);
+                 Pstm.setString(7, c_contraseña);
+                 Rs = pstm.executeUpdate();
+                 
+                 
+                 While (rs.next()) {
+                                                               Usuario = new Registro_Usuario();
+                                                               Usuario.setNombre(rs.getString(“nombre”));
+                                                               Usuario.setApellido(rs.getString(“apellido”));
+                                                               Usuario.setDocumento(rs.getInt(“documento”));
+                                                               Usuario.setTelefono(rs.getInt(“telefono”));
+                                                               Usuario.setEmail(rs.getString(“email”));
+                                                               Usuario.setContraseña(rs.getString(“contraseña”));
+                                                               Usuario.setc_Contraseña(rs.getString(“c_contraseña”));
+                                               }
+                                               
+                               } catch (Exception e) {
+                                               e.printStackTrace();
+                               } finally {
+                                               Try {
+                                                               If (rs ¡= null) {
+                                                                              Rs.close();
+                                                               }
+                                                               
+                                                               If (pstm ¡= null) {
+                                                                              Pstm.close();
+                                                               }
+                                                               
+                                                               If (cn ¡= null) {
+                                                                              Cn.close();
+                                                               }
+                                               } catch (Exception e2) {
+                                                               E2.printStackTrace();
+                                               }
+                               }
+                 
+                               Return usuario;
+         
+                 }
+                
+}
