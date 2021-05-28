@@ -1,0 +1,170 @@
+*{
+       Margin-top: 0;
+       Padding: 0;
+}
+ Body {
+    
+}
+Html {
+    Margin: 0;
+    Padding: 0;
+}
+Body {
+    Font-family: ‘Handlee’, cursive;
+    Font-size: 13pt;
+    Background-color: #efefef;
+    Padding: 10px;
+    Margin: 0;
+}
+H1 {
+    Font-size: 15pt;
+    Color: #20bcd5;
+    Text-align: center;
+    Padding: 18px 0 18px 0;
+    Margin: 0 0 10px 0;
+}
+H1 span {
+    Border: 4px dashed #20bcd5;
+    Padding: 10px;
+}
+P {
+    Padding: 0;
+    Margin: 0;
+}
+.img-circle {
+    Border: 3px solid white;
+    Border-radius: 50%;
+}
+.section {
+    Background-color: #fff;
+    Padding: 15px;
+    Margin-bottom: 10px;
+    Border-radius: 10px;
+}
+#header {
+    Background-image: url(https://www.sololearn.com/Uploads/header.jpg);
+    Background-size: cover;
+}
+#header img {
+    Display: block;
+    Width: 80px;
+    Height: 80px;
+    Margin: auto;
+}
+#header p {
+    Font-size: 25pt;
+    Color: #3b464c;
+    Padding-top: 5px;
+    Margin: 0;
+    Font-weight: bold;
+    Text-align: center;
+}
+.quote {
+    Font-size: 12pt;
+    Text-align: right;
+    Margin-top: 10px;
+}
+Table {
+    Width: 100%;
+}
+Table, th, td {
+    Border: 2px solid #cecece;
+    Border-collapse: collapse;
+    Text-align: center;
+    Table-layout: fixed;
+}
+.selected {
+    Background-color: #f36f48;
+    Font-weight: bold;
+    Color: white;
+}
+Li {
+    Margin-bottom: 15px;
+    Font-weight: bold;
+}
+Progress {
+    Width: 70%;
+    Height: 20px;
+    Color: #3fb6b2;
+    Background: #efefef;
+}
+Progress::-webkit-progress-bar {
+    Background: #efefef;
+}
+Progress::-webkit-progress-value {
+    Background: #3fb6b2;
+} 
+Progress::-moz-progress-bar {
+    Color: #3fb6b2;
+    Background: #efefef;
+}
+Iframe, audio {
+    Display: block;
+    Margin: 0 auto;
+    Border: 3px solid #3fb6b2;
+}
+Hr {
+    Border: 0;
+    Height: 1px;
+    Background: #f36f48;
+}
+Form {
+    Text-align: center;
+    Margin-top: 0;
+}
+.submit {
+    Background-color: #3fb6b2;
+    Padding: 12px 45px;
+    Border-radius: 5px;
+    Cursor: pointer;
+    Color: #ffffff;
+    Border: none;
+    Outline: none;
+    Margin: 0;
+    Font-weight: bold;
+}
+.submit:hover {
+    Background-color: #43ª09d;
+}
+Textarea {
+    Height: 100px;
+}
+Input, textarea {
+    Margin-bottom: 10px;
+    Font-size: 11pt;
+    Padding: 15px 10px 10px;
+    Border: 1px solid #cecece;
+    Background-color: #efefef;
+    Color: #787575;
+    Border-radius: 5px;
+    Width: 70%;
+    Outline: none;
+}
+.face {
+    Transform: scale(0.4);
+    Margin: 0 auto;
+    Display: block;
+    Margin-top: -35px;
+    Margin-bottom: -25px;
+}
+#contacts img {
+    Height: 50px;
+    Width: 50px;
+    Margin-left: 7px;
+    Margin-right: 7px;
+}
+#contacts a {
+    Text-decoration: none;
+}
+#contacts img:hover {
+    Opacity: 0.8;
+}
+#contacts {
+    Text-align: center;
+}
+.copyright {
+    Font-size: 8pt;
+    Text-align: right;
+    Padding-bottom: 10px;
+    Color: grey;
+}
