@@ -1,0 +1,138 @@
+Package entidad;
+ 
+Public class Usuario {
+       Private int idUsuario;
+       Private String email;
+       Private String contraseña;
+ 
+       Public int getIdUsuario() {
+             Return idUsuario;
+       }
+ 
+       Public void setIdUsuario(int idUsuario) {
+             This.idUsuario = idUsuario;
+       }
+ 
+       Public String getEmail() {
+             Return email;
+       }
+ 
+       Public void setEmail(String email) {
+             This.email = email;
+       }
+ 
+       Public String getContraseña() {
+             Return contraseña;
+       }
+ 
+       Public void setContraseña(String contraseña) {
+             This.contraseña = contraseña;
+       }
+ 
+}
+ 
+Package entidad;
+ 
+Public class Registro_Usuario {
+ 
+       
+       Private int idUsuario;
+       Private String nombre;
+       Private String apellido;
+       Private int documento;
+       Private int telefono;
+       Private String email;
+       Private String contraseña;
+       Private String c_contraseña;
+ 
+       
+       /* idUsuario */
+       
+       Public int getIdUsuario() {
+             Return idUsuario;
+       }
+ 
+       Public void setIdUsuario(int idUsuario) {
+             This.idUsuario = idUsuario;
+       }
+       
+       
+       /* Nombre */
+       
+       Public String getNombre() {
+             Return nombre;
+       }
+ 
+       Public void setNombre(String nombre) {
+             This.nombre = nombre;
+       }
+       
+       /* Apellido */
+       
+       Public String getApellido() {
+             Return apellido;
+       }
+ 
+       Public void setApellido(String apellido) {
+             This.apellido = apellido;
+       }
+ 
+       
+       /* Documento */
+       
+       
+       Public int getDocumento() {
+             Return documento;
+       }
+ 
+       Public void setDocumento(int documento) {
+             This.documento = documento;
+       }
+       
+       
+       /* Telefono */
+       
+       Public int getTelefono() {
+             Return telefono;
+       }
+ 
+       Public void setTelefono(int telefono) {
+             This.telefono = telefono;
+       }
+       
+       /* Email */
+       
+       
+       Public String getEmail() {
+             Return email;
+       }
+ 
+       Public void setEmail(String email) {
+             This.email = email;
+       }
+       
+       /* contraseña */
+       
+ 
+       Public String getContraseña() {
+             Return contraseña;
+       }
+ 
+       Public void setContraseña(String contraseña) {
+             This.contraseña = contraseña;
+       }
+       
+       
+       /* c_contraseña */
+       
+       Public String getc_Contraseña() {
+             Return c_contraseña;
+       }
+ 
+       Public void setc_Contraseña(String c_Contraseña) {
+             This.c_contraseña = c_Contraseña;
+       }
+       
+       
+ 
+}
