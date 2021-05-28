@@ -1,0 +1,71 @@
+Import java.sql.Connection;
+Import java.sql.DriverManager;
+Import java.sql.SQLException;
+ 
+Public class Conexión {
+ 
+    Private static final String CONTROLADOR = “com.mysql.jdbc.Driver”;
+    Private static final String URL = “jdbc:mysql://127.0.0.1:3306/bd_tuplazoleta”;
+    Private static final String USUARIO = “root”;
+    Private static final String CLAVE = “”;
+ 
+    Static {
+        Try {
+            Class.forName(CONTROLADOR);
+        } catch (ClassNotFoundException e) {
+            System.out.println(“Error al cargar el controlador”);
+            e.printStackTrace();
+        }
+    }
+    
+    Public static Connection getConexion() {
+        Connection conexión = null;
+        
+        Try {
+            Conexión = DriverManager.getConnection(URL, USUARIO, CLAVE);
+            System.out.println(“Conexión OK”);
+ 
+        } catch (SQLException e) {
+            System.out.println(“Error en la conexión”);
+            e.printStackTrace();
+        }
+        
+        Return conexión;
+    }
+}
+ Paquete controlador
+ 
+Package controlador;
+ 
+Import java.io.IOException;
+ 
+Import javax.servlet.ServletException;
+Import javax.servlet.annotation.WebServlet;
+Import javax.servlet.http.HttpServlet;
+Import javax.servlet.http.HttpServletRequest;
+Import javax.servlet.http.HttpServletResponse;
+ 
+Import entidad.Usuario;
+Import modelo.ModeloUsuario;
+ 
+@WebServlet(“/usuario”)
+Public class ServletUsuario extends HttpServlet {
+            Private static final long serialVersionUID = 1L;
+ 
+            Protected void service(HttpServletRequest request, HttpServletResponse response)
+                                   Throws ServletException, IOException {
+                        String email = request.getParameter(“email”);
+                        String contraseña = request.getParameter(“contraseña”);
+ 
+                        ModeloUsuario modelo = new ModeloUsuario();
+                        Usuario usuario = modelo.iniciarSesion(email, contraseña);
+ 
+                        If (usuario == null) {
+                                   Request.setAttribute(“mensaje”, “Error e-mail y/o clave incorrecta”);
+                                   Request.getRequestDispatcher(“index.jsp”).forward(request, response);
+                        } else {
+                                   Response.sendRedirect(“principal.jsp”);
+                        }
+            }
+ 
+}
