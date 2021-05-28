@@ -1,0 +1,46 @@
+Import java.io.IOException;
+Import javax.servlet.ServletException;
+Import javax.servlet.annotation.WebServlet;
+Import javax.servlet.http.HttpServlet;
+Import javax.servlet.http.HttpServletRequest;
+Import javax.servlet.http.HttpServletResponse;
+Import entidad.Registro_Usuario;
+Import modelo.ModeloRegistroUsuario;
+ 
+ 
+/**
+ * Servlet implementation class ServletRegistroUsuario
+ */
+@WebServlet(“/ServletRegistroUsuario”)
+Public class ServletRegistroUsuario extends HttpServlet {
+            Private static final long serialVersionUID = 1L;
+ 
+            Protected void service(HttpServletRequest request, HttpServletResponse response)
+                                   Throws ServletException, IOException {
+                        
+                        String nombre = request.getParameter(“nombre”);
+                        String apellido = request.getParameter(“apellido”);
+                        Int documento = request.getIntHeader(“documento”);
+                        Int telefono = request.getIntHeader(“telefono”);
+                        String email = request.getParameter(“email”);
+                        String contraseña = request.getParameter(“contraseña”);
+                        String c_contraseña = request.getParameter(“c_contraseña”);
+ 
+                        
+                        
+                        ModeloRegistroUsuario modelo = new ModeloRegistroUsuario();
+                        Registro_Usuario usuario = modelo.Enviar(nombre,apellido,documento,telefono,email, contraseña,c_contraseña);
+ 
+                        If (usuario == null) {
+                                   Request.setAttribute(“mensaje”, “Error digite todos los campos”);
+                                   Request.getRequestDispatcher(“Error.jsp”).forward(request, response);
+                        
+                        
+                        } else {
+                                   Response.sendRedirect(“principal.jsp”);
+                        
+                        
+                        }
+                        
+            }
+}
